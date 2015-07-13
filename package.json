@@ -1,7 +1,7 @@
 {
   "name": "findit",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Walk a directory tree in DOM File System",
   "main": "lib/domfs-findit.js",
   "dependencies": {
