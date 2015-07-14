@@ -1,3 +1,9 @@
+2015.07.14, v1.1.0
+
+fix:
+- (findit) dirs, first could be overwriting
+
+
 2015.07.14, v1.0.3
 
 fix:
