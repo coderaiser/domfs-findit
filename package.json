@@ -5,7 +5,6 @@
   "description": "Walk a directory tree in DOM File System",
   "main": "lib/domfs-findit.js",
   "dependencies": {
-    "diff-match-patch": "~1.0.0"
   },
   "devDependencies": {},
   "scripts": {
