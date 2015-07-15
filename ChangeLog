@@ -1,3 +1,12 @@
+2015.07.15, v1.1.1
+
+fix:
+- (dindit) enry -> entry
+
+feature:
+- (package) main: domfs-findit -> findit
+
+
 2015.07.14, v1.1.0
 
 fix:
