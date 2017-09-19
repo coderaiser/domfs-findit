@@ -1,16 +1,27 @@
 {
-  "name": "findit",
-  "private": true,
+  "name": "domfs-findit",
   "version": "1.1.7",
   "description": "Walk a directory tree in DOM File System",
-  "main": "lib/findit.js",
-  "dependencies": {},
+  "main": "legacy/findit.js",
+  "dependencies": {
+    "emitify": "^3.1.0"
+  },
   "devDependencies": {
-    "eslint": "^4.7.1"
+    "array-from": "^2.1.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.7.1",
+    "webpack": "^3.6.0"
   },
   "scripts": {
-    "lint": "eslint lib/*.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "redrun build:*",
+    "build:client": "webpack --progress",
+    "watch:client": "redrun build:client -- --watch",
+    "wisdom": "npm run build",
+    "build:legacy": "babel -d legacy lib",
+    "postbuild:legacy": "echo \"module.exports = require('./findit');\" > legacy/index.js"
   },
   "repository": {
     "type": "git",

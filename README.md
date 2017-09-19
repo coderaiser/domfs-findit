@@ -5,13 +5,10 @@ Similar to [node-findit](https://github.com/substack/node-findit "Node Findit") 
 ## Install
 
 ```
-bower i findit --save
+npm i findit
 ```
 
 ## How to use?
-
-Add `findit.js` and [emitify](https://github.com/coderaiser/emitify "Emitify").
-Or any other node-compitable [EventEmitter](https://iojs.org/api/events.html "Events") (set `window.Emitify = your_emitter` before using `findit`).
 
 ```html
 <script src="modules/emitify/lib/emitify.js"></script>
@@ -19,33 +16,27 @@ Or any other node-compitable [EventEmitter](https://iojs.org/api/events.html "Ev
 ```
 
 ```js
-var node = window;
-
-node.addEventListener('drop', function (e) {
-    var entry,
-        finder,
-        item = e.dataTransfer.items[0];
-    
+window.addEventListener('drop', (e) => {
     e.preventDefault();
     
-    entry = item.webkitGetAsEntry();
+    const item = e.dataTransfer.items[0];
+    const entry = item.webkitGetAsEntry();
+    const finder = findit(entry);
     
-    finder = findit(entry);
-    
-    finder.on('file', function(file, entry) {
+    finder.on('file', (file, entry) => {
         console.log('file: ', file, entry);
     });
     
-    finder.on('directory', function(file, entry) {
+    finder.on('directory', (file, entry) => {
         console.log('directory: ', file, entry);
     })
     
-    finder.on('end', function() {
+    finder.on('end', () => {
         console.log('done');
     })
 });
-    
-node.addEventListener('dragover', function (e) {
+
+node.addEventListener('dragover', (e) => {
     e.preventDefault();
 });
 ```
@@ -53,3 +44,4 @@ node.addEventListener('dragover', function (e) {
 ## License
 
 MIT
+
