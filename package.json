@@ -5,7 +5,9 @@
   "description": "Walk a directory tree in DOM File System",
   "main": "lib/findit.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^4.7.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
