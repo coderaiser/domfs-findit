@@ -5,14 +5,21 @@ Similar to [node-findit](https://github.com/substack/node-findit "Node Findit") 
 ## Install
 
 ```
-npm i findit
+npm i domfs-findit
 ```
 
 ## How to use?
 
+You can use minified `findit` bundle with:
+
 ```html
-<script src="modules/emitify/lib/emitify.js"></script>
-<script src="lib/findit.js"></script>
+<script src="dist/findit.min.js"></script>
+```
+
+When you use webpack just import `findit` with:
+
+```js
+import findit from `domfs-findit`;
 ```
 
 ```js
