@@ -16,6 +16,7 @@
     "webpack": "^3.6.0"
   },
   "scripts": {
+    "lint": "eslint lib",
     "build": "redrun build:*",
     "build:client": "webpack --progress",
     "watch:client": "redrun build:client -- --watch",
