@@ -1,6 +1,6 @@
 {
   "name": "domfs-findit",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Walk a directory tree in DOM File System",
   "main": "legacy/findit.js",
   "dependencies": {

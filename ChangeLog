@@ -1,3 +1,14 @@
+2017.09.20, v2.0.1
+
+fix:
+- docs(readme)  module name
+
+feature:
+- (package) rm array-from
+- (package) add lint
+- (bowerrc) rm
+
+
 2017.09.20, v2.0.0
 
 feature:
