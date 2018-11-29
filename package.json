@@ -13,7 +13,7 @@
     "babel-loader": "^8.0.4",
     "babel-preset-env": "^1.6.0",
     "eslint": "^5.9.0",
-    "redrun": "^5.9.17",
+    "redrun": "^7.0.3",
     "webpack": "^4.1.0"
   },
   "scripts": {
